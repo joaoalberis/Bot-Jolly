@@ -1,0 +1,4 @@
+br\com\jolly\Botjolly.class
+br\com\jolly\commands\CommandManager.class
+br\com\jolly\commands\Gato.class
+br\com\jolly\utils\Env.class

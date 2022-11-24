@@ -23,11 +23,11 @@ public class profile extends ListenerAdapter{
             int mes = event.getGuild().getTimeCreated().getMonth().getValue();
             mess(mes);
             int dia = event.getGuild().getTimeCreated().getDayOfMonth();
-            ano = event.getUser().getTimeCreated().getYear();
-            mes = event.getUser().getTimeCreated().getMonthValue();
-            mess(mes);
-            dia = event.getUser().getTimeCreated().getDayOfMonth();
             embed.addField("📆 Servidor Criado", dia + " de " + mess + " de " + ano , true);
+            ano = event.getGuild().getMember(event.getUser()).getTimeJoined().getYear();
+            mes = event.getGuild().getMember(event.getUser()).getTimeJoined().getMonth().getValue();
+            dia = event.getGuild().getMember(event.getUser()).getTimeJoined().getDayOfMonth();
+            mess(mes);
             embed.addField("📌 " + event.getUser().getName() + " entrou em", dia + " de " + mess + " de " + ano, true);
             embed.addField("💎 Criador", event.getGuild().getOwner().getUser().getAsMention(), true);
             embed.setThumbnail(event.getGuild().getIconUrl()).setImage("https://media.tenor.com/n2fnv0PQHCYAAAAM/avdf.gif");

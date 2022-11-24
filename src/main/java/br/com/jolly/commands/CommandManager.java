@@ -21,6 +21,9 @@ public class CommandManager extends ListenerAdapter{
         commandData.add(Commands.slash("avatar-user", "Veja o avatar de um usuario")
         .addOption(OptionType.USER, "user", "Escolha um usuario para ver o avatars", true));
 
+        commandData.add(Commands.slash("caracoroa", "Tente a sorte!")
+        .addOption(OptionType.STRING, "moeda", "Escolha cara ou coroa", true, true));
+
         event.getGuild().updateCommands().addCommands(commandData).queue();
         
         

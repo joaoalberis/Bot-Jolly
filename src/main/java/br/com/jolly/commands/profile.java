@@ -1,7 +1,6 @@
 package br.com.jolly.commands;
 
 import java.awt.Color;
-import java.time.OffsetDateTime;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;

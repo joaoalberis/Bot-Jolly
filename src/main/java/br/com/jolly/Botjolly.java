@@ -2,6 +2,7 @@ package br.com.jolly;
 
 import java.util.EnumSet;
 
+import br.com.jolly.commands.AvatarUser;
 import br.com.jolly.commands.CommandManager;
 import br.com.jolly.commands.Dog;
 import br.com.jolly.commands.Gato;
@@ -22,6 +23,7 @@ public class Botjolly {
         bot.addEventListener(new Dog());
         bot.addEventListener(new CommandManager());
         bot.addEventListener(new profile());
+        bot.addEventListener(new AvatarUser());
 
 
 

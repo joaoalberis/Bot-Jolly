@@ -5,7 +5,9 @@ import java.util.EnumSet;
 import br.com.jolly.commands.AvatarUser;
 import br.com.jolly.commands.CaraCoroa;
 import br.com.jolly.commands.CommandManager;
+import br.com.jolly.commands.Conselhos;
 import br.com.jolly.commands.Dog;
+import br.com.jolly.commands.FrasesNorris;
 import br.com.jolly.commands.Gato;
 import br.com.jolly.commands.profile;
 import br.com.jolly.utils.Env;
@@ -26,6 +28,8 @@ public class Botjolly {
         bot.addEventListener(new profile());
         bot.addEventListener(new AvatarUser());
         bot.addEventListener(new CaraCoroa());
+        bot.addEventListener(new Conselhos());
+        bot.addEventListener(new FrasesNorris());
 
 
 

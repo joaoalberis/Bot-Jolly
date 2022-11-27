@@ -1,4 +1,10 @@
-br\com\jolly\Botjolly.class
-br\com\jolly\commands\CommandManager.class
-br\com\jolly\commands\Gato.class
-br\com\jolly\utils\Env.class
+br/com/jolly/utils/Env.class
+br/com/jolly/commands/profile.class
+br/com/jolly/commands/AvatarUser.class
+br/com/jolly/Botjolly.class
+br/com/jolly/commands/Dog.class
+br/com/jolly/commands/Conselhos.class
+br/com/jolly/commands/CommandManager.class
+br/com/jolly/commands/CaraCoroa.class
+br/com/jolly/commands/Gato.class
+br/com/jolly/events/Traducao.class

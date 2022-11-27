@@ -24,6 +24,10 @@ public class CommandManager extends ListenerAdapter{
         commandData.add(Commands.slash("caracoroa", "Tente a sorte!")
         .addOption(OptionType.STRING, "moeda", "Escolha cara ou coroa", true, true));
 
+        commandData.add(Commands.slash("conselhos", "Receba um conselho"));
+        
+        commandData.add(Commands.slash("chucknorris", "Recebe uma frase falada pelo chuck norris"));
+
         event.getGuild().updateCommands().addCommands(commandData).queue();
         
         

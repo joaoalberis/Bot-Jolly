@@ -27,19 +27,19 @@ public class CaraCoroa extends ListenerAdapter{
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         if (event.getName().equals("caracoroa")){
-            int valor = (int) Math.random();
-            switch (valor){
+            float valor = (float) Math.random();
+            switch (Math.round(valor)){
                 case 0:
-                    if (event.getOption("moeda").toString().equals("coroa")){
-                        event.reply("Parabens, você acertou").setEphemeral(false).queue();
-                    }else if(event.getOption("moeda").toString().equals("cara")){
+                    if (event.getOption("moeda").getAsString().equals("coroa")){
+                        event.reply("Parabens, você acertou").setEphemeral(false).complete();
+                    }else if(event.getOption("moeda").getAsString().equals("cara")){
                         event.reply("Você não acertou dessa vez, tente novamente!").setEphemeral(false).queue();
                     }
                     break;
                 case 1:
-                    if (event.getOption("moeda").toString().equals("cara")){
+                    if (event.getOption("moeda").getAsString().equals("cara")){
                         event.reply("Parabens, Você acertou").setEphemeral(false).queue();
-                    }else if(event.getOption("moeda").toString().equals("coroa")){
+                    }else if(event.getOption("moeda").getAsString().equals("coroa")){
                         event.reply("Você não acertou dessa vez, tente novamente!").setEphemeral(false).queue();
                     }
                     break;

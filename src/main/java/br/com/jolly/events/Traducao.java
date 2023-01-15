@@ -16,12 +16,13 @@ public class Traducao {
     public static String tradutorApi(String texto) throws IOException, InterruptedException, ParseException{
         texto = texto.replace(" ", "%20");
         HttpRequest request = HttpRequest.newBuilder()
-		.uri(URI.create("https://translated-mymemory---translation-memory.p.rapidapi.com/api/get?langpair=en%7Cpt&q=" + texto + "!&mt=1&onlyprivate=0&de=a%40b.c"))
+		.uri(URI.create("https://translated-mymemory---translation-memory.p.rapidapi.com/get?langpair=en%7Cpt&q=" + texto + "!&mt=1&onlyprivate=0&de=a%40b.c"))
 		.header("X-RapidAPI-Key", "d21d7b096cmsh831c8922005a4cdp16535djsn096b770c6af5")
 		.header("X-RapidAPI-Host", "translated-mymemory---translation-memory.p.rapidapi.com")
 		.method("GET", HttpRequest.BodyPublishers.noBody())
 		.build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+
         
         JSONObject jObject = new JSONObject();
         JSONParser jp = new JSONParser();

@@ -6,6 +6,7 @@ import br.com.jolly.commands.AvatarUser;
 import br.com.jolly.commands.CaraCoroa;
 import br.com.jolly.commands.CommandManager;
 import br.com.jolly.commands.Conselhos;
+import br.com.jolly.commands.CriarSorteio;
 import br.com.jolly.commands.Dog;
 import br.com.jolly.commands.FrasesNorris;
 import br.com.jolly.commands.Gato;
@@ -20,7 +21,7 @@ public class Botjolly {
     public static JDA bot;
     public static void main(String[] args) {
         bot = JDABuilder.create(Env.TOKEN, EnumSet.allOf(GatewayIntent.class))
-        .setActivity(Activity.playing("Se divertindo")).build();
+        .setActivity(Activity.playing("Sendo Desenvolvido")).build();
 
         bot.addEventListener(new Gato());
         bot.addEventListener(new Dog());
@@ -30,6 +31,7 @@ public class Botjolly {
         bot.addEventListener(new CaraCoroa());
         bot.addEventListener(new Conselhos());
         bot.addEventListener(new FrasesNorris());
+        bot.addEventListener(new CriarSorteio());
 
 
 

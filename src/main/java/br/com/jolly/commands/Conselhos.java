@@ -47,9 +47,9 @@ public class Conselhos extends ListenerAdapter{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            event.getChannel().sendMessage(conselho).queue();
-            event.reply("conselho recebido").setEphemeral(true).queue();
             
+            event.reply("conselho recebido").setEphemeral(true).queue();
+            event.getChannel().sendMessage(conselho).queue();
         }
     }
 

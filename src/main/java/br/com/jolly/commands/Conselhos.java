@@ -20,7 +20,7 @@ public class Conselhos extends ListenerAdapter{
     String conselho;
 
     public void conselhoApi() throws IOException, ParseException, InterruptedException{
-        URL url = new URL("	https://api.adviceslip.com/advice");
+        URL url = new URL("https://api.adviceslip.com/advice");
         HttpsURLConnection request = (HttpsURLConnection) url.openConnection();
         request.connect();
 
@@ -48,8 +48,7 @@ public class Conselhos extends ListenerAdapter{
                 e.printStackTrace();
             }
             
-            event.reply("conselho recebido").setEphemeral(true).queue();
-            event.getChannel().sendMessage(conselho).queue();
+            event.reply(conselho).setEphemeral(false).queue();
         }
     }
 

@@ -39,8 +39,7 @@ public class Gato extends ListenerAdapter{
                 e.printStackTrace();
             }
             
-            event.reply("Admire esse gatinho fofo").setEphemeral(true).queue();
-            event.getChannel().sendMessage(gato).queue();
+            event.reply(gato).setEphemeral(false).queue();
         }
     }
 

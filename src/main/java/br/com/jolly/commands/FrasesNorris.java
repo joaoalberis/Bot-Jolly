@@ -47,8 +47,8 @@ public class FrasesNorris extends ListenerAdapter{
                 e.printStackTrace();
             }
             
-            event.reply("frase do norris recebido").setEphemeral(true).queue();
-            event.getChannel().sendMessage(frases).queue();
+            event.reply(frases).setEphemeral(false).queue();
+            
         }
     }
 

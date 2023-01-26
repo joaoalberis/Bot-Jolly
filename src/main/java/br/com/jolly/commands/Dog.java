@@ -42,8 +42,8 @@ public class Dog extends ListenerAdapter{
             }
 
             
-            event.reply("aqui está seu dog fofin").setEphemeral(true).queue();
-            event.getChannel().sendMessage(dog).queue();
+            event.reply(dog).setEphemeral(false).queue();
+            
         }
     }
 

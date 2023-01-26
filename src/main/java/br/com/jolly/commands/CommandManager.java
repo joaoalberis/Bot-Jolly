@@ -3,8 +3,10 @@ package br.com.jolly.commands;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.guild.GuildReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.interactions.commands.DefaultMemberPermissions;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.CommandData;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
@@ -15,6 +17,13 @@ public class CommandManager extends ListenerAdapter{
     public void onGuildReady(GuildReadyEvent event) {
         List<CommandData> commandData = new ArrayList<>();
 
+        commandData.add(Commands.slash("ban", "Bana um usuario de seu servidor")
+        .addOption(OptionType.USER, "user", "Marque o usuario a ser expulso", true)
+        .addOption(OptionType.STRING, "razao", "Diga a razão pelo qual o player será banido!")
+        .setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR)));
+        commandData.add(Commands.slash("kick", "Expulse um usuario de seu servidor")
+        .addOption(OptionType.USER, "user", "Marque o usuario a ser expulso", true)
+        .setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR)));
         commandData.add(Commands.slash("sugestao", "use para mandar uma sugestão para o servidor!")
         .addOption(OptionType.STRING, "ideia", "Digite aqui a sugestão que você tem. OBS: caso queira pular linha bote o caractere |", true));
 

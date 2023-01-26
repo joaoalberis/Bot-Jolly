@@ -15,12 +15,15 @@ public class CommandManager extends ListenerAdapter{
     public void onGuildReady(GuildReadyEvent event) {
         List<CommandData> commandData = new ArrayList<>();
 
+        commandData.add(Commands.slash("sugestao", "use para mandar uma sugestão para o servidor!")
+        .addOption(OptionType.STRING, "ideia", "Digite aqui a sugestão que você tem. OBS: caso queira pular linha bote o caractere |", true));
+
         commandData.add(Commands.slash("sorteio", "Use para criar um sorteio")
-        .addOption(OptionType.CHANNEL, "canal", "Escolha o canal que será feito o sorteio")
-        .addOption(OptionType.STRING, "titulo", "Digite o titulo do sorteio")
-        .addOption(OptionType.STRING, "descricao", "Digite a descrição de seu sorteio")
-        .addOption(OptionType.INTEGER, "ganhadores", "Digite quantos ganhadores terá")
-        .addOption(OptionType.STRING, "tempo", "Digite o tempo de duração(ex: 1m, 1h, 1d)"));
+        .addOption(OptionType.CHANNEL, "canal", "Escolha o canal que será feito o sorteio", true)
+        .addOption(OptionType.STRING, "titulo", "Digite o titulo do sorteio", true)
+        .addOption(OptionType.STRING, "descricao", "Digite a descrição de seu sorteio", true)
+        .addOption(OptionType.INTEGER, "ganhadores", "Digite quantos ganhadores terá", true)
+        .addOption(OptionType.STRING, "tempo", "Digite o tempo de duração(ex: 1m, 1h, 1d)", true));
 
         commandData.add(Commands.slash("gato", "Irá retornar uma foto de uma gato fofo"));
         commandData.add(Commands.slash("cachorro", "Irá retornar uma foto de uma cachorro fofo"));

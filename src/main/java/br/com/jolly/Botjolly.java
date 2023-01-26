@@ -10,6 +10,7 @@ import br.com.jolly.commands.CriarSorteio;
 import br.com.jolly.commands.Dog;
 import br.com.jolly.commands.FrasesNorris;
 import br.com.jolly.commands.Gato;
+import br.com.jolly.commands.Sugestao;
 import br.com.jolly.commands.profile;
 import br.com.jolly.utils.Env;
 import net.dv8tion.jda.api.JDA;
@@ -32,7 +33,7 @@ public class Botjolly {
         bot.addEventListener(new Conselhos());
         bot.addEventListener(new FrasesNorris());
         bot.addEventListener(new CriarSorteio());
-
+        bot.addEventListener(new Sugestao());
 
 
         System.out.println("🛰️ - Bot Jolly, em funcionamento.");

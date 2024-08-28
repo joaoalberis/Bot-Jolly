@@ -17,8 +17,8 @@ public class CaraCoroa extends ListenerAdapter{
     public void onCommandAutoCompleteInteraction(CommandAutoCompleteInteractionEvent event) {
         if (event.getName().equals("caracoroa") && event.getFocusedOption().getName().equals("moeda")) {
             List<Command.Choice> options = Stream.of(words)
-                    .filter(word -> word.startsWith(event.getFocusedOption().getValue())) // only display words that start with the user's current input
-                    .map(word -> new Command.Choice(word, word)) // map the words to choices
+                    .filter(word -> word.startsWith(event.getFocusedOption().getValue()))
+                    .map(word -> new Command.Choice(word, word))
                     .collect(Collectors.toList());
             event.replyChoices(options).queue();
         }

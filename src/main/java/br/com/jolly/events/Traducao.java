@@ -32,11 +32,6 @@ public class Traducao {
         jArray = (JSONArray) jObject.get("matches");
         jObject = (JSONObject) jArray.get(0);
 
-
-
-        //System.out.println(jObject);
         return (String) jObject.get("translation");
-        /*System.out.println("");
-        System.out.println(jArray);*/
     }
 }

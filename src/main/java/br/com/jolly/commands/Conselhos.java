@@ -31,7 +31,7 @@ public class Conselhos extends ListenerAdapter{
         jsonObject = (JSONObject) jsonObject.get("slip");
         String conse = (String) jsonObject.get("advice");
 
-        conselho = Traducao.tradutorApi(conse);
+        conselho = conse;
 
     }
 
@@ -40,14 +40,10 @@ public class Conselhos extends ListenerAdapter{
         if (event.getName().equals("conselhos")){
             try {
                 conselhoApi();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ParseException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
+            } catch (IOException | InterruptedException | ParseException e) {
                 e.printStackTrace();
             }
-            
+
             event.reply(conselho).setEphemeral(false).queue();
         }
     }

@@ -30,7 +30,7 @@ public class FrasesNorris extends ListenerAdapter{
         String norris = (String) jsonObject.get("value");
         
 
-        frases = Traducao.tradutorApi(norris);
+        frases = norris;
 
     }
 
